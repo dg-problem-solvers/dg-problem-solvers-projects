@@ -25,7 +25,36 @@ A list of projects and some notes on those projects.
 
 \section{Gauss Parametrisation On The Sphere}
 
-The aim here is to obtain a parametrisation of a family of convex bodies in the sphere, analogous to the Gauss-map parametrisation in Euclidean space.
+The aim here is to obtain a parametrisation of a family of convex bodies in the sphere, analogous to the Gauss-map parametrisation in Euclidean space. 
+
+\begin{itemize}
+\item Via projections. 
+
+The idea is to define a projection map $\mathbb{S}^{n+1} \to \mathbb{R}^{n+1}$. This should at the very least take convex bodies to convex bodies. These projections generally are ``based at a point'', $p_0$. Ideally these should also be conformal. Some candidates (not all conformal) are
+\begin{itemize}
+\item Gnomic Projection,
+\item Steriographic Projection,
+\item Vertical projection (Orthogonal projection onto the hyperplane orthogonal to $p_0$).
+\end{itemize}
+Now we have a Gauss-map on $\mathbb{R}^{n+1}$ using only the differentiable structure on $\mathbb{R}^{n+1}$ and so our Gauss map is composition of the Euclidean Gauss map with the projection map. Equivalently, we can just work on $\mathbb{R}^{n+1}$ with the metric induced by the projection and completely forget about the sphere. The best candidate seems to be steriographic projection since it realises there sphere as locally conformally flat (all we miss is a single point!) and the conformal factor is rotationally symmetric.
+
+For this to work, the base point needs to be chosen correctly. For shrinking flows that collapse to a point, this should be the point of collapse, and for expanding flows that converge to an equator, this should be either centre of the equator. One needs to take a little care with the class of solutions that exist for all time and don't collapse, e.g. closed curves bounding an area equal to $2\pi$ will exist for all time and converge to an equator under the curve shortening flow (a shrinking flow), so really should be treated like expanding flows.
+
+\item Support function parametrisations.
+
+Here we need a translation map $\tau$ taking the normal $\nu$ to a fixed ``base point'' $p_0$ and above. Then the support function should measure the distance from the base point to the tangent equator. As a function of $x\in M$ the hypersurface, this should be $s(x) = \nu(x) \cdot d \grad d$ where $d$ is the distance from $p_0$ to $x$. In geodesic polar coordinates, $d \grad d = r \partial_r$. Our translation map has to have some uniqueness properties, in particular, a convex hypersurface should provide a diffeomorphism of the hypersurface onto the unit sphere $U_{p_0} \mathbb{S}^{n+1} \subset T_{p_0} \mathbb{S}^{n+1}$. Then to parametrise the hypersurface we first do
+\[
+z \in U_{p_0} \mathbb{S}^{n+1} \mapsto y = \exp_{p_0} (s(z) z)
+\]
+The equator $E_x$ through $y$ perpendicular to the geodesic connecting $p_0$ to $y$ (i.e. $\gamma(t) = \exp_{p_0} (t z)$ with $\gamma(s(z)) = y$) should intersect $M$ in precisely one point $x$, which is the point with $\tau \nu = z$. Letting $\alpha(z) = d(y, x)$ and \(v(z) \in T_y E\) such that \(x = \exp_y(\alpha(z) v(z))\), our parametrisation now becomes
+\[
+\varphi: z \in U_{p_0} \mathbb{S}^{n+1} \mapsto \exp_{\exp_{p_0} (s(z) z)} (\alpha(z) v) = \exp_{y} (\alpha(z) v(z)).
+\]
+
+If this is analogous to the Euclidean space situation, \(\alpha(z) v(z) = \tau_{p_0,y} \grad s (z)\) where \(\tau_{p_0,y}\) denotes parallel translation along the geodesic \(\gamma(t) = \exp_{p_0} (t z)\) from the point \(p_0\) (\(t=0\)) to the point \(y\) (\(\gamma(s(z))\). 
+\end{itemize}
+
+All this being resolved, then changing from one of the parametrisations above to the flow parametrisation should take the Harnack inequality $\partial_t F \geq 0$ to the Harnack inequality \(\partial_t F + \|\mathcal{W}\|_{\dot{F}} \geq 0\). Perhaps it takes it to something else and this ``something else'' is in fact the sharp Harnack inequality. All of this seems difficult to compute! It may be easiest to work in the conformally flat model offered by steriographic projection where calculations could be rather more explicit.
 
 \section{Type II Singularity Classification}
 

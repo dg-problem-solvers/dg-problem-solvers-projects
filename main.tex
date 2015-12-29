@@ -25,22 +25,52 @@ A list of projects and some notes on those projects.
 
 \section{Gauss Parametrisation On The Sphere}
 
+The aim here is to obtain a parametrisation of a family of convex bodies in the sphere, analogous to the Gauss-map parametrisation in Euclidean space.
+
 \section{Type II Singularity Classification}
+
+The aim here is to classify Type II singularities of Mean Convex MCF (or more general flows, why not?) as Bowl solitons. A possible approach is to obtain a Harnack inequality for the non-collapsing two-point function $k$ and show equality is attained precisely on rotationally symmetric translating solitons, hence the Bowl soliton by uniqueness. In fact, we may only need a Harnack inequality for translating graphs (are all translators graphs over the hyperplane orthogonal to the translation direction?) in which equality is attained precisely on rotationally symmetric translating graphs!
 
 \section{Andrews Gauss Curvature Flow Conjecture}
 
-\section{Classification of Ancient Solutions on the Sphere}
+The aim is to show that the Gauss curvature flow of convex, closed hypersurfaces converges to round points in all dimensions.
+
+\section{Classification of (Quasi) Ancient Solutions on the Sphere}
 
 \begin{itemize}
 \item Non-collapsing leads to very short argument for classification with 1-homogeneous speeds.
-\item Convex Rigidity + Aleksandrov reflection gives a classification for any imaginable allowable speed.
-\item What are the equivalent conditions to Huisken-Sinestrari
+\item Convex Rigidity + Aleksandrov reflection gives a classification for any imaginable allowable speed, even in the quasi-ancient case.
+\item What are the equivalent conditions to \cite{2014arXiv1405.7509H} for convex ancient solutions on the sphere?
 \end{itemize}
 
-\section{Ancient solutions on Riemannian Manifolds with Positive Curvature}
+\section{Harnack and Ancient solutions on Riemannian Manifolds with Positive Curvature}
+
+\begin{itemize}
+\item Possibly two projects?
+\item If $\ric \geq K_0 g$, for $K_0 \geq 0$, do we obtain a Harnack inequality?
+\item Use centre manifold analysis to show ancient solutions exist near minimal hyper-surfaces and to obtain uniqueness. Convex ancient solutions should correspond to totally geodesic hyper-surfaces.
+\end{itemize}
+
+\section{(Quasi) Ancient solutions with singular backwards limits}
+
+\begin{itemize}
+\item For quasi-ancient solutions of the flow $H^p$, $0<p<1$ in the sphere, if $H$ is bounded then Rigidity + Alexsandrov reflection gives classification.
+\item Are there quasi-ancient solutions with $H$ unbounded backwards in time?
+\item Given any convex polyhedra, we should be able to use the Harnack inequality (like Hamilton, ref?) to show that there is a unique solution emanating from the polyhedron. The question is, can such solutions be quasi-ancient? If the polyhedron is strictly convex, the answer is no, because we have a barrier starting with a geodesic sphere that is not an equator. But if the polyhedron intersects an equator in at least 2 points, no such initial barrier exists so we cannot immediately rule these out. The example to bear in mind here is that of Lunes. Can we estimate the speed at which the singular backwards limit pulls away from the equator to then insert a barrier at time $-T_S + \epsilon$ for which the flow exists for strictly less time than $-T_S + \epsilon$? This would rule out non-singular limits. On the other hand, could we perhaps show that singular limits do exists by constructing one?
+\item Blow up analysis: Set $\lambda_k := \sup\limits_{(x,t)\in M\times [-t_k,-\varepsilon]} H(x,t),$ where $t_k$ approaches $-T_S$ and $\varepsilon>0$ is small enough. Set $\lambda_{\infty}=\lim_{k\to\infty}\lambda_k$ and $x_k(\cdot,t):=(\lambda_k+1)x(\cdot, t_k+(\lambda_k+1)^{-p-1}t)$. Then if $\lambda_{\infty} < \infty$ it should be possible to show $x_{\infty}$ is an equator. If $\lamba_{\infty} = \infty$, then the $x_{\infty}$ is a translating soliton. In the latter case, there is a singular backwards limit! The question is whether such things can exist. Do Lunes, or more generally (non-strictly) convex polyhedra blow up to look like translating solitons?
+\end{itemize}
+
+\section{$L^p$ Minkowski Problem}
+
+\section{Forward Convergence Results}
+
+\section{Optimality of Harnack and Solitons}
+
+\section{Alexandrov-Fenchel inequalities}
+
+\section{Convergence to spherical floating bodies}
 
 
-\section{}
 
 \bibliographystyle{amsplain}
 \bibliography{Bibliography.bib}

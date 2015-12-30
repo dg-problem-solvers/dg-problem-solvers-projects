@@ -62,7 +62,41 @@ The aim here is to classify Type II singularities of Mean Convex MCF (or more ge
 
 \section{Andrews Gauss Curvature Flow Conjecture}
 
-The aim is to show that the Gauss curvature flow of convex, closed hypersurfaces converges to round points in all dimensions.
+The aim is to show that the Gauss curvature flow of convex, closed hypersurfaces converges to round points in all dimensions. Some possible approaches are as follows:
+
+\begin{itemize}
+\item Isoperimetric profile comparisons. 
+
+Take a pair of geometric functionals, such as enclosed volume and area, or a pair of mixed volumes, and define the profile $I(x)$to be the least of one functional subject to the constraint that the other functional is $x$. A variation on this theme is Hamilton's isoperimetric ratio which deals with dividing a set into two pieces and minimising some combination of these (Hamilton uses Harmonic mean) subject to a constraint on the common boundary. 
+
+The idea is to find a comparison function that is initially below the initial profile of a hypersurface, and satisfies a differential inequality ensuring it remains below. If it converges to the sphere profile, then we are done because it is already known that a limit exists. In general we don't expect the profile to be monotone, but it should have some concavity properties (from the convexity of the hypersurface), as should the comparison which might be sufficient to obtain the result. 
+
+It might be better to study the isoperimetric profile of the domain bounded by the hypersurface instead. Since this is a convex body, the result in \cite{MR1674097} says the isoperimetric profile is concave. If you take the profile of the hypersurface itself, I don't know whether it's concave or not. It would be awesome to be able to construct a comparison with some model solution, but this may not actually be possible. See \cite{MR2843240} for the corresponding result for the CSF.
+
+\item Comparison Geometry I: Riccati Equation.
+
+Consider the comparison geometry operator $A$, geodesics $\gamma$ as the tangent space endomorphism $A = \nabla \gamma'$. This is trivial in the direction $\gamma'$ since $\gamma$ is a geodesic. For constant sectional curvature $K_0$ spaces, $A = K_0 Id$ on normal directions. Perhaps it will be possible to show that $A$ converges to $K_0 Id$ which then gives the result since constant sectional curvature spaces are characterised by this identity. 
+
+The operator $A$ satisfies the Riccati equation
+\[
+A' + A^2 + \ric(\gamma') = 0.
+\]
+Jacobi fields are solutions of
+\[
+J' = A J
+\]
+This is going to be closely related to Perelman's $\mathcal{L}$-geodesics theory.
+
+\item Comparison Geometry II: Heintze-Karcher evolution.
+
+The Heintze-Karcher inequality arises from integrating along normal geodesic rays until you hit the cut locus of the hypersurface. A centrally-symmetric body (in particular the sphere!) has cut locus a single point (I think). Now the equality case in Hientze-Karcher is again attained on the sphere. So we can see how some quantity cooked up from Heintze-Karcher evolves and show it converges to the sphere equality case. 
+
+Variations on this would be to consider following normal geodesic rays until you hit the cut-locus and define a scalar valued function that assigns the distance from this point to the cut-locus. If this converges to a constant, surely we must have a sphere!
+
+\item Symmetrisation techniques
+
+I wonder what happens to some sort of symmetrisation map acting on the hypersurface under the flow? E.g. if one applies a Steiner (Schwarz, some sort of Aleksandrov reflection?) symmetrisation at each time, does this somehow improve under the flow? More precisely, choose a hyperplane through the origin and Steiner symmetrise with respect to this plane. Now try to show that the Hausdorff distance from the hypersurface to it's symmetrisation is monotone decreasing under the flow. Or perhaps there is some sort of comparison with a model that converges to $0$. Maybe Hausdorff distance is not the best choice. Is there some other way to measure how far a hypersurface deviates from it's symmetrisation? Another intriguing idea would be to think of this as a function on the sphere. Given a point on the sphere (a direction), symmetrise with respect to the orthogonal hyperplane and then measure (e.g. Hausdorff distance) how far the symmetrisation is from the original hypersurface. This produces a one parameter family of real valued functions defined on the sphere. Show this converges to $0$ under the flow and you're done!
+\end{itemize}
 
 \section{Classification of (Quasi) Ancient Solutions on the Sphere}
 
